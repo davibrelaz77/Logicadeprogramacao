@@ -1,51 +1,24 @@
 Algoritmo "semnome"
-//
-//
+// 
+//  
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 19/11/2019
+// Data atual  : 16/11/2019
 Var
-// Seção de Declarações das variáveis
-A, B: vetor [1..7, 1..7] de inteiro
-i, j: inteiro
-funcao fatorial (n: inteiro): inteiro
-inicio
-se (n=0) entao
-retorne 1
-senao
-retorne n*fatorial(n-1)
-fimse
-fimfuncao
+vt: vetor[1..9] de inteiro
+vtsoma: vetor[1..9] de real
+i: inteiro
+
+
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc...
-para i de 1 ate 7 faca
-para j de 1 ate 7 faca
-escreva ("Informe os números [", i, "," , j, "]:")
-leia (A[i,j])
-B[1,1] <- fatorial(A[i])
-B[i,1] <- A[i] + A[i]
-B[i,2] <- A[i] + A[i]
-B[3,3] <- fatorial(A[i])
-B[i,3] <- A[i] + A[i]
-B[i,4] <- A[i] + A[i]
-B[5,5] <- fatorial(A[i])
-B[i,5] <- A[i] + A[i]
-B[i,6] <- A[i] + A[i]
-B[7,7] <- fatorial(A[i])
-B[i,7] <- A[i] + A[i]
-B[j,1] <- A[i] + A[i]
-B[j,2] <- A[i] + A[i]
-B[i,3] <- A[i] + A[i]
-B[i,4] <- A[i] + A[i]
-B[i,5] <- A[i] + A[i]
-B[i,6] <- A[i] + A[i]
-B[i,7] <- A[i] + A[i]
-fimpara
-fimpara
-para i de 1 ate 7 faca
-escreval ("-", i)
-para j de 1 ate 7 faca
-escreva (B[i,j])
-fimpara
-fimpara
+Para i de 1 ate 9 faca
+ Escreva("Insira o" ,i,"o dígito: ")
+ leia(vt[i])
+Fimpara
+ vtsoma[i] <- vt[1] + vt[2] + vt[3] + vt[4] + vt[5] + vt[6] + vt[7] + vt[8] + vt[9]
+ vtsoma[i]<- vtsoma[i] %10
+ escreva ("Seu dígito verificador é", vtsoma[i])
+
+
+
 Fimalgoritmo
