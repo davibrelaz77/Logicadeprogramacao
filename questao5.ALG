@@ -1,36 +1,34 @@
 Algoritmo "semnome"
-// 
-//  
+//
+//
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 16/11/2019
+// Data atual  : 15/11/2019
 Var
-// Seção de Declarações das variáveis 
-a,b: vetor[1..12] de inteiro
-c:vetor[1..12,1..2] de inteiro
-lin,col: inteiro
+// Seção de Declarações das variáveis
+v: vetor [1..5] de real
+i: inteiro
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
-para lin de 1 ate 12 faca
-       escreva("Digite um valor para a posição [",lin,"]")
-       leia (a[lin])
+// Seção de Comandos, procedimento, funções, operadores, etc...
+para i de 1 ate 5 faca
+escreval ("Escreva o ", i ,"° numero: ")
+leia  (v[i])
 fimpara
-//////////////////////////////////////////////////
-para lin de 1 ate 12 faca
-       escreva("Digite um valor para a posição [",lin,"]")
-       leia (b[lin])
-fimpara
-//////////////////////////////////////////////////
-para lin de 1 ate 12 faca
-c[lin,1] <- (a[lin]*2)
-c[lin,2] <- (b[lin]-5)
-fimpara
-/////////////////////////////////////////////////
-para lin de 1 ate 12 faca
-       para col de 1 ate 2 faca
-       escreva(c[lin,col]:5)
-       fimpara
-       escreval(" ")
+
+para i de 1 ate 5 faca
+
+se  (i % 2= 1) entao
+v [i] <- v[i] + (v[i] * (5/100))
+escreva (v[i])
+
+senao
+se (i %2 = 0) entao
+v[i]<- v[i] + (v[i] * (5/100))
+
+escreva(v[i])
+fimse
+fimse
+
 fimpara
 
 Fimalgoritmo
